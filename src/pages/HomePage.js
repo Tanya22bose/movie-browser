@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import YearFilter from "../components/Filters"; // Import the new component
+import YearFilter from "../components/Filters";
 import MovieList from "../components/MovieList/MovieList";
 import MovieListHeading from "../components/MovieListHeading";
-import SearchBox from "../components/SearchBar/SearchBar";
+import SearchBox from "../components/SearchBox/SearchBox";
 import useInfiniteScroll from "../hooks/useInfiniteScroll";
 import useDebounce from "../utils/debounce";
 import { fetchInitialMovies, fetchMoreMovies } from "../utils/fetchMovies";
@@ -12,7 +12,7 @@ import { fetchInitialMovies, fetchMoreMovies } from "../utils/fetchMovies";
 const HomePage = () => {
   const [movies, setMovies] = useState([]);
   const [filteredMovies, setFilteredMovies] = useState([]);
-  const [searchValue, setSearchValue] = useState("Batman");
+  const [searchValue, setSearchValue] = useState("trending");
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(null);
   const [favorites, setFavorites] = useState([]);
@@ -33,8 +33,7 @@ const HomePage = () => {
       setFilteredMovies,
       setMovies,
       setPage,
-      setTotalPages,
-      toast
+      setTotalPages
     );
   }, [debouncedSearchValue]);
 

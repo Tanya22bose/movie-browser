@@ -5,7 +5,6 @@ export const fetchMoreMovies = async (
   setMovies,
   setFilteredMovies,
   setPage,
-  toast,
   debouncedSearchValue
 ) => {
   if (totalPages && page > totalPages) return;
@@ -16,8 +15,6 @@ export const fetchMoreMovies = async (
     setMovies((prevMovies) => [...prevMovies, ...result.data]);
     setFilteredMovies((prevMovies) => [...prevMovies, ...result.data]);
     setPage((prevPage) => prevPage + 1);
-  } else {
-    toast.error(result.error);
   }
 };
 
@@ -26,8 +23,7 @@ export const fetchInitialMovies = async (
   setFilteredMovies,
   setMovies,
   setPage,
-  setTotalPages,
-  toast
+  setTotalPages
 ) => {
   if (debouncedSearchValue === "") {
     setFilteredMovies([]);
@@ -41,7 +37,5 @@ export const fetchInitialMovies = async (
     setFilteredMovies(result.data);
     setPage(2);
     setTotalPages(Math.ceil(result.totalPages / 10));
-  } else {
-    toast.error(result.error);
   }
 };
