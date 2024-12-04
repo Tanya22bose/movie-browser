@@ -31,7 +31,7 @@ The Movie Browser Web Application allows users to search, filter, and save their
 
 ### `Clone the repo`:
 
-git clone [http://localhost:3000](http://localhost:3000)
+git clone [repo-link](https://github.com/Tanya22bose/movie-browser.git)
 
 In the project directory, you can run:
 
