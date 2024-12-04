@@ -44,7 +44,6 @@ const HomePage = () => {
       setMovies,
       setFilteredMovies,
       setPage,
-      toast,
       debouncedSearchValue
     )
   );
