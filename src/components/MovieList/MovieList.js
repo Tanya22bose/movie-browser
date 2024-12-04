@@ -24,8 +24,8 @@ const MovieList = ({ movies, favorites, setFavorites, toast }) => {
             style={{ objectFit: "cover", borderRadius: "5px", height: "15rem" }}
           />
           <div className="card-body">
-            <h5 className="card-title">{movie.Title}</h5>
-            <h6 className="card-subtitle mb-2 text-muted">
+            <h5 className="card-title text-white">{movie.Title}</h5>
+            <h6 className="card-subtitle mb-2 text-white-50">
               Release Year: {movie.Year}
             </h6>
             <Favorite
