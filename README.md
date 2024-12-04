@@ -1,5 +1,8 @@
 # Movie Browser Web Application Documentation
 
+# Deployed Movie Browser: 
+[movie-browser](https://movie-browser-zeta.vercel.app/?vercelToolbarCode=PKGoLW89-Qa6uLE)
+
 # Introduction
 
 The Movie Browser Web Application allows users to search, filter, and save their favorite movies. Built with React and Bootstrap, it uses the OMDb API for movie data and offers a responsive, SEO-friendly, and accessible experience.
