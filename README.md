@@ -2,6 +2,24 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+src
+|-- components
+|-- -- MovieList.js
+|-- -- MovieCard.js
+|-- -- SearchBar.js
+|-- -- Filters.js
+|-- pages
+|-- -- HomePage.js
+|-- hooks
+|-- -- useInfiniteScroll.js
+|-- services
+|-- -- api.js
+|-- utils
+|-- -- debounce.js
+|-- App.js
+|-- index.js
+|-- App.css
+
 ## Available Scripts
 
 In the project directory, you can run:
