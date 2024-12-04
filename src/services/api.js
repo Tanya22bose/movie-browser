@@ -1,7 +1,7 @@
 /* the API key is exposed intentionally for demo purpose, 
 since we are not maintaining .env file right now */
 const API_KEY = "67385054";
-const BASE_URL = "http://www.omdbapi.com/";
+const BASE_URL = "https://www.omdbapi.com/";
 
 export const getMovieRequest = async (searchValue, page) => {
   const url = `${BASE_URL}?s=${searchValue}&apikey=${API_KEY}&page=${page}&type=movie`;
