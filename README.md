@@ -3,6 +3,9 @@
 # Deployed Movie Browser: 
 [movie-browser](https://movie-browser-zeta.vercel.app/)
 
+# Note on API Key
+This API only supports sending the key via a query parameter, which we have implemented. However, as a security measure for production applications, we recommend using more secure JWT keys stored in a secure vault.
+
 # Introduction
 
 The Movie Browser Web Application allows users to search, filter, and save their favorite movies. Built with React and Bootstrap, it uses the OMDb API for movie data and offers a responsive, SEO-friendly, and accessible experience.
