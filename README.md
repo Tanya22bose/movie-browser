@@ -1,7 +1,7 @@
 # Movie Browser Web Application Documentation
 
 # Deployed Movie Browser: 
-[movie-browser](https://movie-browser-zeta.vercel.app/?vercelToolbarCode=PKGoLW89-Qa6uLE)
+[movie-browser](https://movie-browser-zeta.vercel.app/)
 
 # Introduction
 
