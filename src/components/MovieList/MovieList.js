@@ -1,4 +1,5 @@
 import { Favorite } from "../Favorite/Favorite";
+import fallbackImg from "./../../fallbackMovie.jpg";
 
 const MovieList = ({ movies, favorites, setFavorites, toast }) => {
   const isFavorite = (movie) =>
@@ -18,7 +19,11 @@ const MovieList = ({ movies, favorites, setFavorites, toast }) => {
           }}
         >
           <img
-            src={movie.Poster}
+            src={
+              movie.Poster === "N/A" || !movie.Poster
+                ? fallbackImg
+                : movie.Poster
+            }
             className="card-img-top"
             alt={movie.Title}
             style={{ objectFit: "cover", borderRadius: "5px", height: "15rem" }}

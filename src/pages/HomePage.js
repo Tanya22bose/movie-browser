@@ -12,7 +12,7 @@ import { fetchInitialMovies, fetchMoreMovies } from "../utils/fetchMovies";
 const HomePage = () => {
   const [movies, setMovies] = useState([]);
   const [filteredMovies, setFilteredMovies] = useState([]);
-  const [searchValue, setSearchValue] = useState("trending");
+  const [searchValue, setSearchValue] = useState("");
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(null);
   const [favorites, setFavorites] = useState([]);

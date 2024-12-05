@@ -1,7 +1,7 @@
 import React from "react";
 
 const YearFilter = ({ movies, selectedYear, onYearChange }) => {
-  const uniqueYears = [...new Set(movies.map((movie) => movie.Year))].sort(
+  const uniqueYears = [...new Set(movies?.map((movie) => movie.Year))].sort(
     (a, b) => b - a
   );
 

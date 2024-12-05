@@ -1,4 +1,4 @@
-import { getMovieRequest } from "./../services/api";
+import { getMovieRequest, getTrendingMovies } from "./../services/api";
 export const fetchMoreMovies = async (
   totalPages,
   page,
@@ -7,6 +7,7 @@ export const fetchMoreMovies = async (
   setPage,
   debouncedSearchValue
 ) => {
+  if (debouncedSearchValue === "") return;
   if (totalPages && page > totalPages) return;
 
   const result = await getMovieRequest(debouncedSearchValue, page);
@@ -25,17 +26,20 @@ export const fetchInitialMovies = async (
   setPage,
   setTotalPages
 ) => {
-  if (debouncedSearchValue === "") {
-    setFilteredMovies([]);
-    setMovies([]);
-    return;
-  }
-  const result = await getMovieRequest(debouncedSearchValue, 1);
+  const result =
+    debouncedSearchValue === ""
+      ? await getTrendingMovies()
+      : await getMovieRequest(debouncedSearchValue, 1);
 
   if (result.success && result.data) {
     setMovies(result.data);
     setFilteredMovies(result.data);
     setPage(2);
     setTotalPages(Math.ceil(result.totalPages / 10));
+  } else if (result.error) {
+    setFilteredMovies([]);
+    setMovies([]);
+    setPage(1);
+    setTotalPages(null);
   }
 };
